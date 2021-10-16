@@ -1,4 +1,4 @@
-# Parstagram - Part II
+# <h1>Parstagram - Part II</h1>
 
 This is an Instagram clone with a custom Parse backend that allows a user to post photos, view a global photos feed, and add comments!
 
@@ -22,8 +22,8 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-# Parstagram - Part I
+<img src='https://submissions.us-east-1.linodeobjects.com/ios_university/rPcGoEhS.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<h1># Parstagram - Part I</h1>
 
 This is an Instagram clone with a custom Parse backend that allows a user to post photos and view a global photos feed.
 
