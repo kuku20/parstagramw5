@@ -121,6 +121,26 @@ class FeedViewController: UIViewController , UITableViewDelegate, UITableViewDat
                 
                 cell.photoView.af_setImage(withURL: url)
                 
+                let query = PFQuery(className: "Profiles")
+            query.whereKey("author", equalTo: user)
+            query.findObjectsInBackground{(posts, error) in
+                if (posts?.count)! != 0{
+                    print((posts?.count)!)
+                    let test = posts![(posts?.count)!-1]
+                    let imageFile = test["image"] as! PFFileObject
+                    let urlString = imageFile.url!
+                    let url = URL(string: urlString)!
+                    cell.userProfile.af_setImage(withURL: url)
+                   
+                }
+            }
+                
+                
+                
+                
+                
+                
+                
                 return cell
             }else if indexPath.row <= comments.count {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell") as! CommentCell
@@ -128,6 +148,27 @@ class FeedViewController: UIViewController , UITableViewDelegate, UITableViewDat
                 cell.commentLabel.text = comment["text"] as? String
                 let user = comment["author"] as! PFUser
                 cell.nameLabel.text = user.username
+                
+                
+                let query = PFQuery(className: "Profiles")
+            query.whereKey("author", equalTo: user)
+            query.findObjectsInBackground{(posts, error) in
+                if (posts?.count)! != 0{
+                    print((posts?.count)!)
+                    let test = posts![(posts?.count)!-1]
+                    let imageFile = test["image"] as! PFFileObject
+                    let urlString = imageFile.url!
+                    let url = URL(string: urlString)!
+                    cell.commentProfile.af_setImage(withURL: url)
+
+                }
+            }
+                
+                
+                
+                
+                
+                
                 return cell
             }else{
                 let cell = tableView.dequeueReusableCell(withIdentifier:    "AddCommentCell")!
