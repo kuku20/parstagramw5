@@ -22,7 +22,7 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='rPcGoEhS.gif' />
+<img src='ezgif.com-gif-maker.gif' />
 
 <h1># Parstagram - Part I</h1>
 
